@@ -31,7 +31,7 @@ npm run deploy
 Or manually:
 
 ```bash
-npx angular-cli-ghpages --dir=dist/portfolio-app
+npx angular-cli-ghpages --dir=dist/portfolio-app/browser
 ```
 
 ### 3. Configure GitHub Pages

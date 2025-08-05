@@ -64,13 +64,9 @@ export class Experience {
     return education.id;
   }
 
-  downloadResume() {
-  const link = document.createElement('a');
-  link.href = 'assets/resume/Resume_Atharva_Gulhane.pdf';
-  link.download = 'Resume_Atharva_Gulhane.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+downloadResume() {
+  window.open('https://drive.google.com/file/d/1OlCn68yTVdG74CHSvIkowbsM1iHgILqf/view?usp=sharing', '_blank');
 }
+
 
 }
