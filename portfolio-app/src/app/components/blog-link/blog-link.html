@@ -3,7 +3,7 @@
     <!-- Section Header -->
     <div class="mb-16">
       <h2 class="section-title">My Blog</h2>
-      <p class="text-text-secondary text-lg max-w-2xl mx-auto">
+      <p class="text-text-secondary dark:text-text-secondary-dark text-lg max-w-2xl mx-auto">
         I write about technology, software development, and my experiences in the tech industry. 
         Check out my latest articles and insights.
       </p>
@@ -17,8 +17,8 @@
         </svg>
       </div>
       
-      <h3 class="text-2xl font-bold text-text-primary mb-4">TeknoGeeks</h3>
-      <p class="text-text-secondary mb-6">
+      <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary-dark mb-4">TeknoGeeks</h3>
+      <p class="text-text-secondary dark:text-text-secondary-dark mb-6">
         My personal blog where I share insights about software development, 
         technology trends, and my journey in the tech world.
       </p>
@@ -52,18 +52,18 @@
 
     <!-- Recent Posts Preview -->
     <div class="text-left max-w-4xl mx-auto">
-      <h3 class="text-2xl font-bold text-text-primary mb-8 text-center">Recent Posts</h3>
+      <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary-dark mb-8 text-center">Recent Posts</h3>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="card group cursor-pointer" (click)="openBlog()">
           <div class="flex items-center justify-between mb-4">
             <span class="text-primary text-sm font-medium">Technology</span>
-            <span class="text-text-secondary text-sm">2 days ago</span>
+            <span class="text-text-secondary dark:text-text-secondary-dark text-sm">2 days ago</span>
           </div>
-          <h4 class="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+          <h4 class="text-xl font-bold text-text-primary dark:text-text-primary-dark mb-3 group-hover:text-primary transition-colors">
             Building Modern Web Applications with Angular
           </h4>
-          <p class="text-text-secondary mb-4 line-clamp-3">
+          <p class="text-text-secondary dark:text-text-secondary-dark mb-4 line-clamp-3">
             Exploring the latest features in Angular and how to build scalable, 
             maintainable web applications using modern development practices.
           </p>
@@ -78,12 +78,12 @@
         <div class="card group cursor-pointer" (click)="openBlog()">
           <div class="flex items-center justify-between mb-4">
             <span class="text-primary text-sm font-medium">Development</span>
-            <span class="text-text-secondary text-sm">1 week ago</span>
+            <span class="text-text-secondary dark:text-text-secondary-dark text-sm">1 week ago</span>
           </div>
-          <h4 class="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
+          <h4 class="text-xl font-bold text-text-primary dark:text-text-primary-dark mb-3 group-hover:text-primary transition-colors">
             The Future of Frontend Development
           </h4>
-          <p class="text-text-secondary mb-4 line-clamp-3">
+          <p class="text-text-secondary dark:text-text-secondary-dark mb-4 line-clamp-3">
             Discussing emerging trends in frontend development, from new frameworks 
             to performance optimization techniques and developer experience.
           </p>
@@ -99,8 +99,8 @@
 
     <!-- Newsletter Signup -->
     <div class="mt-16 card max-w-2xl mx-auto">
-      <h3 class="text-2xl font-bold text-text-primary mb-4">Stay Updated</h3>
-      <p class="text-text-secondary mb-6">
+      <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary-dark mb-4">Stay Updated</h3>
+      <p class="text-text-secondary dark:text-text-secondary-dark mb-6">
         Subscribe to my newsletter to get notified about new blog posts and tech insights.
       </p>
       
@@ -108,7 +108,7 @@
         <input 
           type="email" 
           placeholder="your.email@example.com"
-          class="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-text-primary placeholder-text-secondary focus:outline-none focus:border-primary transition-colors"
+          class="flex-1 px-4 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-lg text-text-primary dark:text-text-primary-dark placeholder-text-secondary dark:placeholder-text-secondary-dark focus:outline-none focus:border-primary transition-colors"
         >
         <button class="btn-secondary whitespace-nowrap">
           Subscribe
