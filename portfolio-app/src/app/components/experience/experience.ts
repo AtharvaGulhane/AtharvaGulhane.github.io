@@ -28,49 +28,32 @@ interface Education {
 })
 export class Experience {
   workExperience: WorkExperience[] = [
-    {
-      id: 1,
-      title: 'Software Engineer',
-      company: 'Tech Company',
-      period: '2023 - Present',
-      description: 'Developed and maintained web applications using modern technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS']
-    },
-    {
-      id: 2,
-      title: 'Frontend Developer',
-      company: 'Startup Inc.',
-      period: '2022 - 2023',
-      description: 'Built responsive user interfaces and implemented modern web development practices. Worked on improving user experience and performance optimization.',
-      technologies: ['React', 'JavaScript', 'CSS3', 'Git', 'Figma']
-    },
-    {
-      id: 3,
-      title: 'Junior Developer',
-      company: 'Digital Agency',
-      period: '2021 - 2022',
-      description: 'Assisted in developing web applications and learned industry best practices. Contributed to various client projects and internal tools.',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL']
-    }
+     {
+    id: 1,
+    title: 'Software Development Engineer',
+    company: 'Cybage Software Pvt. Ltd, Pune',
+    period: 'August 2022 – Present',
+    description: `Engaged in full-stack development using Java, Spring Boot, and Angular. Led containerization and Kubernetes deployments. Developed secure cross-system file transfers and CI/CD pipelines.`,
+    technologies: ['Java', 'Spring Boot', 'Angular', 'Docker', 'Kubernetes', 'Jenkins', 'SFTP']
+  }
   ];
 
   educationHistory: Education[] = [
     {
-      id: 1,
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University Name',
-      period: '2018 - 2022',
-      description: 'Studied computer science fundamentals, algorithms, data structures, and software engineering principles.',
-      gpa: '3.8/4.0'
-    },
-    {
-      id: 2,
-      degree: 'High School Diploma',
-      institution: 'High School Name',
-      period: '2016 - 2018',
-      description: 'Completed high school education with focus on mathematics and sciences.',
-      gpa: '3.9/4.0'
-    }
+    id: 1,
+    degree: 'B.Tech in Computer Science & Engineering',
+    institution: 'MIT World Peace University, Pune',
+    period: '2018 – 2022',
+    description: 'Studied software engineering, algorithms, web technologies, and DevOps fundamentals.',
+    gpa: '8.7/10'
+  },
+  {
+    id: 2,
+    degree: 'High School (Science)',
+    institution: 'DAV Public School, Panvel',
+    period: '2016 – 2018',
+    description: 'Completed higher secondary education with Physics, Chemistry, Mathematics, and Computer Science.'
+  }
   ];
 
   trackByExperience(index: number, experience: WorkExperience): number {
@@ -80,4 +63,14 @@ export class Experience {
   trackByEducation(index: number, education: Education): number {
     return education.id;
   }
+
+  downloadResume() {
+  const link = document.createElement('a');
+  link.href = 'assets/resume/Resume_Atharva_Gulhane.pdf';
+  link.download = 'Resume_Atharva_Gulhane.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 }

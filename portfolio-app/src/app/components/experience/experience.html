@@ -18,26 +18,31 @@
         <!-- Work Experience -->
         <div *ngFor="let experience of workExperience; trackBy: trackByExperience" class="relative">
           <!-- Timeline Dot -->
-          <div class="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-background-dark"></div>
-          
+          <div
+            class="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-background-dark">
+          </div>
+
           <!-- Content -->
           <div class="ml-16">
             <div class="card">
               <!-- Header -->
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                 <div>
-                  <h3 class="text-xl font-bold text-text-primary dark:text-text-primary-dark">{{ experience.title }}</h3>
+                  <h3 class="text-xl font-bold text-text-primary dark:text-text-primary-dark">{{ experience.title }}
+                  </h3>
                   <p class="text-primary font-medium">{{ experience.company }}</p>
                 </div>
-                                  <span class="text-text-secondary dark:text-text-secondary-dark text-sm mt-2 sm:mt-0">{{ experience.period }}</span>
+                <span class="text-text-secondary dark:text-text-secondary-dark text-sm mt-2 sm:mt-0">{{
+                  experience.period }}</span>
               </div>
-              
+
               <!-- Description -->
               <p class="text-text-secondary dark:text-text-secondary-dark mb-4">{{ experience.description }}</p>
-              
+
               <!-- Technologies -->
               <div class="flex flex-wrap gap-2">
-                <span *ngFor="let tech of experience.technologies" class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
+                <span *ngFor="let tech of experience.technologies"
+                  class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
                   {{ tech }}
                 </span>
               </div>
@@ -48,23 +53,27 @@
         <!-- Education -->
         <div *ngFor="let education of educationHistory; trackBy: trackByEducation" class="relative">
           <!-- Timeline Dot -->
-          <div class="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-background-dark"></div>
-          
+          <div
+            class="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background dark:border-background-dark">
+          </div>
+
           <!-- Content -->
           <div class="ml-16">
             <div class="card">
               <!-- Header -->
               <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                 <div>
-                  <h3 class="text-xl font-bold text-text-primary dark:text-text-primary-dark">{{ education.degree }}</h3>
+                  <h3 class="text-xl font-bold text-text-primary dark:text-text-primary-dark">{{ education.degree }}
+                  </h3>
                   <p class="text-primary font-medium">{{ education.institution }}</p>
                 </div>
-                                  <span class="text-text-secondary dark:text-text-secondary-dark text-sm mt-2 sm:mt-0">{{ education.period }}</span>
+                <span class="text-text-secondary dark:text-text-secondary-dark text-sm mt-2 sm:mt-0">{{ education.period
+                  }}</span>
               </div>
-              
+
               <!-- Description -->
               <p class="text-text-secondary dark:text-text-secondary-dark mb-4">{{ education.description }}</p>
-              
+
               <!-- GPA/Details -->
               <div *ngIf="education.gpa" class="text-text-secondary dark:text-text-secondary-dark text-sm">
                 GPA: {{ education.gpa }}
@@ -77,12 +86,15 @@
 
     <!-- Download Resume -->
     <div class="text-center mt-16">
-      <a href="#" class="btn-primary inline-flex items-center">
+      <button (click)="downloadResume()" class="btn-primary inline-flex items-center">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+          </path>
         </svg>
         Download Resume
-      </a>
+      </button>
     </div>
+
   </div>
 </section>
