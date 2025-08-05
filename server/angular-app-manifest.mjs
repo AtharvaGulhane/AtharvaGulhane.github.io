@@ -2,49 +2,49 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: '/AtharvaGulhane.github.io/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/AtharvaGulhane.github.io"
   },
   {
     "renderMode": 2,
-    "route": "/projects"
+    "route": "/AtharvaGulhane.github.io/projects"
   },
   {
     "renderMode": 2,
-    "route": "/skills"
+    "route": "/AtharvaGulhane.github.io/skills"
   },
   {
     "renderMode": 2,
-    "route": "/experience"
+    "route": "/AtharvaGulhane.github.io/experience"
   },
   {
     "renderMode": 2,
-    "route": "/contact"
+    "route": "/AtharvaGulhane.github.io/contact"
   },
   {
     "renderMode": 2,
-    "route": "/blog"
+    "route": "/AtharvaGulhane.github.io/blog"
   },
   {
     "renderMode": 2,
-    "redirectTo": "/",
-    "route": "/**"
+    "redirectTo": "/AtharvaGulhane.github.io",
+    "route": "/AtharvaGulhane.github.io/**"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 12787, hash: '4d050c1a46bd493de3301ee784f666fe2d7a45e2cd1af454682d089fd9899398', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1012, hash: '74a72b7e649cf167dd0c2fcb89ad185fad58edfb0a4db516786a542647bf0c32', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 25318, hash: 'c9feca7b0a0b4645aa00a01d34a61234b6613ff5d35cf7d79b4d01817ab03edf', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'blog/index.html': {size: 31361, hash: '59ad01216e4e9b3a7402e81e8cde53128d714b4d8b26a18441a54d5e925e0bcc', text: () => import('./assets-chunks/blog_index_html.mjs').then(m => m.default)},
-    'experience/index.html': {size: 29053, hash: 'cb476cc876ed715a419d04ff7128d722c4cb1f21a5ca2cfb4a6b7f25c07d581a', text: () => import('./assets-chunks/experience_index_html.mjs').then(m => m.default)},
-    'contact/index.html': {size: 32538, hash: '3eb01073e13389c30307112bc824b1344b43f9b07607cf8bbf70cf34cd963485', text: () => import('./assets-chunks/contact_index_html.mjs').then(m => m.default)},
-    'skills/index.html': {size: 67460, hash: 'cf7d8a97ded6bfa9344f247db55b45849fc18c777bd7ffa8825d0437eec2979d', text: () => import('./assets-chunks/skills_index_html.mjs').then(m => m.default)},
-    'projects/index.html': {size: 65391, hash: '86e67646bee0904a3f210302fa10213bdaf8479151c8e10242603464d2a03773', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 12812, hash: '6db3c5a033e3bfe010cdefb252fe369e7b1f48d1e594a37ed88b1df0e021ed74', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1037, hash: 'ca86bb91a880a7bf90cfeb2450fe0b0c3a4032e88bc2c4f995d49289c8ef2ea7', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'blog/index.html': {size: 31561, hash: '0d95b130bb49eb7f6b48472c65f6e81105b1f5f940a6e1f822f5d02250ce383b', text: () => import('./assets-chunks/blog_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 25518, hash: '8526ee3a65f476c5353526b736f129ecb9fd65201a7c9b0eb210a5b02a8cd490', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'experience/index.html': {size: 29253, hash: '27be814b3923528f3978f3269f8587352569c1d6bcb85c35720a8a20deadd435', text: () => import('./assets-chunks/experience_index_html.mjs').then(m => m.default)},
+    'contact/index.html': {size: 32738, hash: '99e4a528f23c511a6a9229aab0bb5baea585079f72f4111794d2ce5874c240ea', text: () => import('./assets-chunks/contact_index_html.mjs').then(m => m.default)},
+    'skills/index.html': {size: 67660, hash: '90635d8c17bf83f8fbbb591811508cb21260a798771ee89bd51cb1dd877f1a00', text: () => import('./assets-chunks/skills_index_html.mjs').then(m => m.default)},
+    'projects/index.html': {size: 65591, hash: '1e8392a04454fb50be2cc9990296177b164d9d1e0a22f7a0d515c77a847cc44b', text: () => import('./assets-chunks/projects_index_html.mjs').then(m => m.default)},
     'styles-H5A23HD6.css': {size: 33325, hash: 'HqdeF7pjc4M', text: () => import('./assets-chunks/styles-H5A23HD6_css.mjs').then(m => m.default)}
   },
 };

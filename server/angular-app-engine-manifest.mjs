@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/AtharvaGulhane.github.io',
   supportedLocales: {
   "en-US": ""
 },
