@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import emailjs from 'emailjs-com';
+
 interface ContactForm {
   name: string;
   email: string;
@@ -17,7 +19,7 @@ interface ContactForm {
   styleUrl: './contact.css'
 })
 export class Contact {
-  formData: ContactForm = {
+  formData = {
     name: '',
     email: '',
     subject: '',
@@ -28,25 +30,29 @@ export class Contact {
 
   onSubmit() {
     if (this.submitting) return;
-    
+
     this.submitting = true;
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', this.formData);
-      
-      // Reset form
-      this.formData = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      };
-      
-      this.submitting = false;
-      
-      // Show success message (you can implement a toast notification here)
-      alert('Thank you for your message! I\'ll get back to you soon.');
-    }, 2000);
+
+    const serviceID = 'service_xg5me7a';
+    const templateID = 'template_0ycr8ow';
+    const publicKey = '_pdwFA3IwLKYLtYyB';
+
+    const templateParams = {
+      name: this.formData.name,
+      email: this.formData.email,
+      subject: this.formData.subject,
+      message: this.formData.message
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
+        alert('✅ Message sent successfully!');
+        this.formData = { name: '', email: '', subject: '', message: '' };
+        this.submitting = false;
+      }, (error) => {
+        console.error('EmailJS Error:', error);
+        alert('❌ Failed to send message. Try again later.');
+        this.submitting = false;
+      });
   }
 }
