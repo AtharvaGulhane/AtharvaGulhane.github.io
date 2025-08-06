@@ -15,7 +15,7 @@ This guide will help you deploy your Angular portfolio website to GitHub Pages.
 First, build the application for production:
 
 ```bash
-npm run build:prod
+ng build --configuration production
 ```
 
 This will create optimized files in the `dist/portfolio-app` directory.
